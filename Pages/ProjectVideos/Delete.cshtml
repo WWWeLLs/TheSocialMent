@@ -1,0 +1,40 @@
+﻿@page
+@model PortfolioProject.Pages.ProjectVideos.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Vids</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vids.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vids.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vids.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vids.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vids.YouTubeCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vids.YouTubeCode)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Vids.VideoId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

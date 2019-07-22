@@ -1,0 +1,58 @@
+﻿@page
+@model PortfolioProject.Pages.ProjectMentoree.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Mentoree</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentoree.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentoree.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentoree.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentoree.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentoree.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentoree.Phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentoree.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentoree.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentoree.Company)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentoree.Company)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentoree.Career)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentoree.Career)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Mentoree.MentoreeId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

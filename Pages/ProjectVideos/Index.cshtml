@@ -1,0 +1,123 @@
+﻿@page
+@model PortfolioProject.Pages.ProjectVideos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>YouTube</h2>
+
+@if (User.Identity.IsAuthenticated) //IF TRUE
+{
+
+    if (Model.CurrentUser.AdminType == "Top-Admin")
+    {
+        <p>
+            <a asp-page="Create">Create New</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vids[0].Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vids[0].Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vids[0].YouTubeCode)
+                    </th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Vids)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.YouTubeCode)
+                        </td>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@item.VideoId">Edit</a> |
+                            <a asp-page="./Details" asp-route-id="@item.VideoId">Details</a> |
+                            <a asp-page="./Delete" asp-route-id="@item.VideoId">Delete</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    }
+    else if (Model.CurrentUser.AdminType == "Mentoree")
+
+    {
+        <div class="row">
+            <div class="col-md-10">
+                <div id="video">
+
+                    <iframe src="https://www.youtube.com/embed/0BFQbCVtI2k" frameborder="1" allowfullscreen> width="100" height="100"</iframe>
+                    <iframe src="https://www.youtube.com/embed/hh46lVSKWHc" frameborder="1" allowfullscreen> width="100" height="100"</iframe>
+                    <button type="button" class="w3-button w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
+                    <button type="button" class="w3-button w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+                    @*<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>*@
+
+                    <hr />
+                    <iframe src="https://www.youtube.com/embed/-o-uGCPnHCw" frameborder="1" allowfullscreen> width="100" height="100"</iframe>
+                    <iframe src="https://www.youtube.com/embed/0wpCZxiAQzw" frameborder="1" allowfullscreen> width="100" height="100"</iframe>
+                    <button type="button" class="w3-button w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
+                    <button type="button" class="w3-button w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+
+                    <hr />
+                </div>
+            </div>
+        </div>
+    }
+}
+
+
+        @*<table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Vids[0].Title)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Vids[0].Description)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Vids[0].YouTubeCode)
+                        </th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Vids)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.YouTubeCode)
+                            </td>
+                            <td>
+                                <a asp-page="./Edit" asp-route-id="@item.VideoId">Edit</a> |
+                                <a asp-page="./Details" asp-route-id="@item.VideoId">Details</a> |
+                                <a asp-page="./Delete" asp-route-id="@item.VideoId">Delete</a>
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>*@

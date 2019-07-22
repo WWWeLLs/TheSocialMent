@@ -1,0 +1,59 @@
+﻿@page
+@model PortfolioProject.Pages.ProjectMentors.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Mentors</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Mentors.FirstName" class="control-label"></label>
+                <input asp-for="Mentors.FirstName" class="form-control" />
+                <span asp-validation-for="Mentors.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentors.LastName" class="control-label"></label>
+                <input asp-for="Mentors.LastName" class="form-control" />
+                <span asp-validation-for="Mentors.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentors.Phone" class="control-label"></label>
+                <input asp-for="Mentors.Phone" class="form-control" />
+                <span asp-validation-for="Mentors.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentors.Email" class="control-label"></label>
+                <input asp-for="Mentors.Email" class="form-control" />
+                <span asp-validation-for="Mentors.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentors.Company" class="control-label"></label>
+                <input asp-for="Mentors.Company" class="form-control" />
+                <span asp-validation-for="Mentors.Company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mentors.Career" class="control-label"></label>
+                <input asp-for="Mentors.Career" class="form-control" />
+                <span asp-validation-for="Mentors.Career" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

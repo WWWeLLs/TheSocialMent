@@ -1,0 +1,266 @@
+﻿@page
+@model PortfolioProject.Pages.ProjectConnection.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h4>MENTORSHIP </h4>
+<h3>@DateTime.Now</h3>
+<hr />
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    @*<div class="carousel-inner" role="listbox">
+        <div class="item active">*@
+    <img src="~/images/SocialMENT3.png" alt="LEVELS" class="img-responsive" />
+    @*<div class="carousel-caption M2heading" role="option"></div>*@
+    @*</div>*@
+
+    @*</div>*@
+    @*<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>*@
+</div>
+<h4 style="text-align:center">CONNECTED <br /></h4>
+<h4 style="text-align:center">JULY 2, 2019 <br /></h4>
+<hr />
+<div>
+    <img style="width:20%;height:auto;float:left" src="~/images/ImageCardFemale.jpg">
+    <img style="width:20%;height:auto;float:right" src="~/images/ImageCardMale.jpg">
+    <div style="text-align:left">
+        <h5>MADELIINE ANDERSON</h5>
+        <p>WEB DEVELOPER</p>
+        <p>MENTEE</p>
+    </div>
+    <div style="text-align:right">
+        <h5>ROBERT SANCHEZ</h5>
+        <p>TECHNOLOGY MANAGER</p>
+        <p>MENTOR</p>
+    </div>
+</div>
+<hr />
+<form>
+    <fieldset>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="container">
+                    <h4>MESSAGING</h4>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-1">&nbsp;</div>
+                        <div class="col-2">
+                            <h4 style="text-align:justify">USER</h4>
+                            <input style="color:black;float:left" type="text" id="userInput" />
+                            <br />
+
+                            <h4 style="text-align:justify">MESSAGE</h4>
+                            <input style="color:black" type="text" id="messageInput" />
+
+                            <input style="color:black" type="button" id="sendButton" value="Send Message" />
+                        </div>
+                    </div>
+                    @*<div style="float:right" class="col-md-7">
+                            <select multiple>
+                                <option value="LevelOne">Level One </option>
+                                <option value="LevelTwo">Level Two</option>
+                                <option value="LevelThree">Level Three</option>
+                                <option value="LevelFour">Level Four</option>
+                            </select>
+                        </div>*@
+                    <div class="row">
+                        <div class="col-8">
+                        </div>
+                        <div class="row">
+                            <div class="col-2">&nbsp;</div>
+                            <div class="col-2">
+                                <ul id="messagesList"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+                    <script src="~/js/chat.js"></script>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>
+@* MENTORSHIP FORM *@
+<form method="post">
+    <fieldset>
+        <legend>LEVEL ONE</legend>
+        <div id="levelOne">
+            <p>AS A MENTOR, ARE YOU INTERESTED IN PROVIDING PROFESSIONAL GUIDANCE AND ANSWERING QUESTIONS THE MENTOREE HAS?</p>
+            <input style="color:black" type="text" name="levelOne" value="" />
+            <button style="color:black" onclick="questions()" id="questionBtn" type="button">NEXT</button>
+        </div>
+        <hr />
+        <legend>LEVEL TWO</legend>
+        <div style="display:none" id="levelTwo">
+            <p>AS A MENTOR, ARE YOU INTERESTED IN PROVIDING RESOURCES, BOOKS, OR TOOLS TO HELP THE MENTOREE?</p>
+            <input style="color:black" type="text" name="levelTwo" value="" />
+            <button style="color:black" onclick="questions()" id="questionBtn" type="button">NEXT</button>
+        </div>
+        <hr />
+        <legend>LEVEL THREE</legend>
+        <div style="display:none" id="levelThree">
+            <p>AS A MENTOR, DO YOU HAVE THE AVAILABILTY TO MEET THE MENTOREE FOR COFFEE/TEA CHATS, LUNCH & MEETINGS?</p>
+            <input style="color:black" type="text" name="levelThree" value="" />
+            <button style="color:black" onclick="questions()" id="questionBtn" type="button">NEXT</button>
+        </div>
+        <hr />
+        <legend>LEVEL FOUR</legend>
+        <div style="display:none" id="levelFour">
+            <p>AS A MENTOR, DO HAVE THE AVAILABILTY TO ATTEND NETWORKING EVENTS, MEETUPS, AND MAKE CONNECTIONS?</p>
+            <input style="color:black" type="text" name="levelFour" value="" />
+            <button style="color:black" onclick="questions()" id="questionBtn" type="button">NEXT</button>
+        </div>
+        @*<div>
+                <label>&nbsp;</label>
+                <input style="color:black" type="submit" value="SUBMIT" class=" submit" />
+            </div>*@
+    </fieldset>
+</form>
+<script>
+    //VARIABLES FOR MENTOR QUESTIONS
+    var questionOne = document.getElementById("levelOne");
+    var questionTwo = document.getElementById("levelTwo");
+    var questionThree = document.getElementById("levelThree");
+    var questionFour = document.getElementById("levelFour");
+    var questionBtn = document.getElementById("questionBtn");
+    var questionDiv = 0;
+    //FUNCTION FOR QUESTIONS
+    function questions() {
+        if (questionDiv === 0) {
+            questionOne.style.display = "none";
+            questionTwo.style.display = "block";
+            questionDiv += 1;
+
+        } else if (questionDiv === 1) {
+            questionTwo.style.display = "none";
+            questionThree.style.display = "block";
+            questionDiv += 1;
+
+        } else if (questionDiv === 2) {
+            questionThree.style.display = "none";
+            questionFour.style.display = "block";
+            questionDiv += 1;
+
+        } else if (questionDiv === 3) {
+            questionFour.style.display = "none";
+
+        }
+    }
+</script>
+
+<div class="month">
+    <ul>
+        <li class="prev">&#10094;</li>
+        <li class="next">&#10095;</li>
+        <li style="font-size:40px">July<br><span style="font-size:35px">2019</span></li>
+    </ul>
+</div>
+
+<ul class="weekdays">
+    <li>Mo</li>
+    <li>Tu</li>
+    <li>We</li>
+    <li>Th</li>
+    <li>Fr</li>
+    <li>Sa</li>
+    <li>Su</li>
+</ul>
+
+<ul class="days">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li><span class="active">8</span></li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+    <li>21</li>
+    <li>22</li>
+    <li>23</li>
+    <li>24</li>
+    <li>25</li>
+    <li>26</li>
+    <li>27</li>
+    <li>28</li>
+    <li>29</li>
+    <li>30</li>
+    <li>31</li>
+   
+</ul>
+@*END CALENDAR*@
+
+@*@if (User.Identity.IsAuthenticated) //IF TRUE
+    {
+
+        if (Model.CurrentUser.AdminType == "Top-Admin")
+        {
+            <p>
+                <a asp-page="Create">Create New</a>
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Connection[0].MentorsId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Connection[0].MentoreeId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Connection[0].ConnectionDate)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Connection)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MentorsId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MentoreeId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ConnectionDate)
+                            </td>
+                            <td>
+                                <a asp-page="./Edit" asp-route-id="@item.ConnectionId">Edit</a> |
+                                <a asp-page="./Details" asp-route-id="@item.ConnectionId">Details</a> |
+                                <a asp-page="./Delete" asp-route-id="@item.ConnectionId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }*@

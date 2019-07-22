@@ -1,0 +1,266 @@
+﻿@page
+@model PortfolioProject.Pages.ProjectMentoree.UserProfileMentoreeModel
+@{
+    ViewData["Title"] = "UserProfileMentoree";
+}
+@* CTA from LOGIN >ACTION:CLICK>RESULT:USER LANDS ON LOGIN PAGE>
+    ACTION:USER VALIDATED>RESULT:USER LOGGED IN SUCCESSFULLY>
+    USER LANDS ON USERPROFLEMENTOREE PAGE *@
+<h4 style="text-align:center">MENTEE USER PROFILE</h4>
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                <a href="#" class="w3-bar-item w3-button">One new friend request</a>
+                <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
+                <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+            </div>
+        </div>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+            <img src="~/images/ImageCardFemale.jpg" class="w3-circle" style="height:20px;width:20px" alt="">
+        </a>
+    </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+</div>
+
+<!-- Page Container -->
+<form>
+    <fieldset>
+        <legend>MADELINE ANDERSON</legend>
+        <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+            <!-- The Grid -->
+            <div class="w3-row">
+                <!-- Left Column -->
+                <div class="w3-col m3">
+                    <!-- Profile -->
+                    <div class="w3-card w3-round w3-white">
+                        <div class="w3-container">
+                            <p class="w3-center"><img src="~/images/ImageCardFemale.jpg" class="w3-circle" style="height:250px;width:250px" alt=""></p>
+                            <div>
+                                <h6 style="text-align:center">
+                                    MADELINE ANDERSON
+                                    <br>
+                                </h6>
+                            </div>
+                            <hr>
+                            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-text-theme"></i> SOFTWARE DEVELOPER</p>
+                            <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Milwaukee, WI.</p>
+                            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-text-theme"></i>Madeline.Anderson@gmail.com </p>
+                            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text"></i>(414)123-4567 </p>
+                        </div>
+                    </div>
+                    <!-- Accordion -->
+                    <div class="w3-card w3-round">
+                        <div class="w3-white">
+                            <div id="Demo1" class="w3-hide w3-container">
+                                <p>Some text..</p>
+                            </div>
+                            <!-- Alert Box -->
+                            <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+                                <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+                                    <i class="fa fa-remove"></i>
+                                </span>
+                                <p><strong>GOOD MORNING!</strong></p>
+                                <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-orange">1 New Notify</span></button>
+                            </div>
+
+                            @*<div id="Demo3" class="w3-hide w3-container">
+                                    <div class="w3-row-padding">
+                                    </div>
+                                </div>*@
+                        </div>
+                    </div>
+                    <!--SKILLS TECH PROGRAMMING -->
+                    <div class="w3-card w3-round w3-white w3-hide-small">
+                        <div class="w3-container">
+                            <p style="text-align:center"><strong>SKILLS</strong></p>
+                            <p>
+                                <span class="w3-theme-d1">HTML</span>
+                                <span class="w3-theme-d1">QA</span>
+                                <span class="w3-theme-d1">CSS</span>
+                                <span class="w3-theme-d1">JAVASCRIPT</span>
+                                <span class="w3-theme-d1">ADOBE XD</span>
+                                <span class="w3-theme-d1">C# </span>
+                                <span class="w3-theme-d1">PYTHON</span>
+                                <span class="w3-theme-d1">REACT.JS</span>
+                                <hr />
+                                <span class="w3-theme-d1">GITHUB </span>
+                                <span class="w3-theme-d1">SASS</span>
+                                <span class="w3-theme-d1">NODE.JS</span>
+                                <hr />
+                                <span class="w3-theme-d1">MSSQL SERVER</span>
+                                <span class="w3-theme-d1">VISUAL STUDIO CODE</span>
+                                <span class="w3-theme-d1">VISUAL STUDIO 2019</span>
+                                <span class="w3-theme-d1">ASP.NET FRAMEWORK</span>
+                                <span class="w3-theme-d1">AWS CERTIFICATION</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Left Column -->
+                </div>
+                <!-- Middle Column -->
+                <div class="w3-col m7">
+                    <div class="w3-row-padding">
+                        <div class="w3-col m12">
+                            <div class="w3-card w3-round w3-white">
+                                <div class="w3-container w3-padding">
+                                    <span>134 FOLLOWERS</span> <span>25 FOLLOWING</span>
+                                    <h6 class="w3-opacity"></h6>
+                                    <p contenteditable="true" class="w3-border w3-padding">Working Status: Freelance Web Application Development</p>
+                                    <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div @*class="w3-container w3-card w3-white w3-margin-bottom"*@>
+                        <h2><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-black"></i>Work Experience</h2>
+
+                        <h5>FREELANCE SOFTWARE DEVELOPER/ TECH SOCIAL MEDIA AMBASSADOR</h5>
+                        <h6><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2000 - <span class="w3-tag w3-white w3-round">Current</span></h6>
+                        <p>
+                            Specialising in mobile technology such as building apps for Google's Android, Apple's iOS and Microsoft's Windows Phone platforms.
+                            Microsoft appllication tech volunteer for the youth in the community.  
+                        </p>
+                        <hr>
+                    </div>
+                    <div @*class="w3-container w3-card w3-white w3-margin-bottom"*@>
+                        <h2><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-black"></i>Education</h2>
+
+                        <h5>SELF-TAUGHT  </h5>
+                        <h6><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2019 - <span class="w3-tag w3-white w3-round">Jun 2000</span></h6>
+                        <p>
+                            MADELINE ANDERSON is a Self-taught developer who just wanted a new challenge in life. She went viral on social media by 
+                            video journalling the experiences during her tech journey and sharing How to Videos on Youtube.
+                          
+                        </p>
+                        <hr>
+                    </div>
+
+                    @*<div class="w3-container w3-card w3-white w3-round w3-margin">
+
+            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
+            <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>
+        </div>*@
+
+                    @*VIDEO*@
+                <div class="w3-container w3-card w3-round w3-margin">
+                    <hr />
+                    <span class="w3-right w3-opacity">1 min</span>
+                    <hr class="w3-clear">
+                    <div class="w3-row-padding" style="margin:0 -16px">
+                        <h4 style="text-align:center">MEDIA </h4>
+                        <div>
+                            <iframe src="https://www.youtube.com/embed/0BFQbCVtI2k" frameborder="1" allowfullscreen></iframe>
+
+                        </div>
+                    </div>
+                    @*<button type="button" class=" w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button>
+                    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>*@
+                    <hr />
+                    @*MESSAGE*@
+                    <h4 style="text-align:center">MESSAGING</h4>
+                    <div class="container">
+                        <div class="row">&nbsp;</div>
+                        <div class="row">
+                            <div class="col-6">&nbsp;</div>
+                            <div class="col-6">
+                                <h4 style="text-align:justify">USER</h4>
+                                <input style="color:black;float:left" type="text" id="userInput" />
+                                <br />
+
+                                <h4 style="text-align:justify">MESSAGE</h4>
+                                <input style="color:black" type="text" id="messageInput" />
+
+                                <input style="color:black" type="button" id="sendButton" value="Send Message" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">&nbsp;</div>
+                            <div class="col-6">
+                                <ul id="messagesList"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+                    <script src="~/js/chat.js"></script>
+                </div>
+
+                    <!-- End Middle Column -->
+                </div>
+                <!-- Right Column -->
+                <div class="w3-col m2">
+                    <div class="w3-card w3-round w3-white w3-center">
+                        <div class="w3-container">
+                            <button onclick="Connection()">  <i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i><a asp-page="/ProjectConnection/Index">MENTORSHIP CONNECTIONS</a></button>
+                            <div id="Demo2" class="w3-hide w3-container">
+                                <p>Some other text..</p>
+                            </div>
+                            <p>Upcoming Events:</p>
+                            <img src="~/images/TEDTECH.jpg" alt="TEDTALK" style="width:100%;">
+                            <p><strong>TED TALKS</strong></p>
+                            <p>MONDAY 8AM </p>
+                            <p>FISERV FORUM </p>
+                            <form>
+                                <button class="w3-button w3-block w3-theme-l4"><a href="https://www.eventbrite.com">INFO</a></button>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="w3-card w3-round w3-white w3-center">
+                        <div class="w3-container">
+                            <p>MENTORSHIP REQUEST</p>
+                            <img src="~/images/ImageCardMale.jpg" alt="" style="width:50%"><br>
+                            <span>RICHARD SANCHEZ</span>
+                            <span>LEVEL 4 MENTOR</span>
+                            <div class="w3-row w3-opacity">
+                                <div class="w3-half">
+                                    <button onclick="ACCEPT()" class="w3-round w3-section" title="Accept"><i style="background-color:black;color:green" class="fa fa-check w3-large"></i></button>
+                                </div>
+                                <div class="w3-half">
+                                    <button onclick="DENY()" class="w3-round w3-section" title="Decline"><i style="background-color:black;color:red" class="fa fa-remove w3-large"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    @*<div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+
+                        <p>SELECT MENTORS</p>
+
+                        <hr />
+
+                        <p>SEARCH</p>
+                        <h4>MENTOR NETWORK</h4>
+                        <form>
+                            <input type="text" class="btnSearch" asp-for="/ProjectMentors/UserPr" />
+                            <input type="submit" class="btnSearch" value="SEARCH" />
+                        </form>*@
+
+                    <!-- End Right Column -->
+                </div>
+                <!-- End Grid -->
+            </div>
+
+            <!-- End Page Container -->
+        </div>
+          
+    </fieldset>
+</form>

@@ -1,0 +1,55 @@
+﻿@page
+@model PortfolioProject.Pages.ProjectMentors.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mentors</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentors.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentors.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentors.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentors.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentors.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentors.Phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentors.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentors.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentors.Company)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentors.Company)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentors.Career)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mentors.Career)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Mentors.MentorsId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
