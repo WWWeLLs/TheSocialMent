@@ -1,0 +1,11 @@
+﻿//MENTORSHIP CONNECTION PROMPTS
+function Connection() {
+    alert("YOU ARE NOW CONNECTED");
+}
+//MENTORSHIP REQUEST ACCEPTED & DENIED
+function ACCEPT() {
+    alert("REQUEST ACCEPTED, CLICK MENTORSHIP CONNECTION LINK");
+}
+function DENY() {
+    alert("REQUEST DENIED");
+}
