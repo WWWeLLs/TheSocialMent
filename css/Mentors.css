@@ -1,0 +1,13 @@
+﻿body {
+}
+
+.M2heading {
+    font-family: Candara;
+    font-size: 20px;
+    font-weight: normal;
+    color: white;
+}
+.btnSearch {
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,58 @@
+﻿body {
+    
+  
+}
+
+
+.card {
+    position:fixed;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.4);
+ 
+}
+
+/*USER PROFILE COLUMN SECTIONS*/
+.columnUP {
+    float: left;
+    width: 20%;
+}
+.rowUP:after {
+    content: "";
+    display:table;
+    clear: both;
+}
+
+/*USER PROFILE COLUMN WORK SECTIONS*/
+.columnUPW {
+    float: left;
+    width: 50%;
+}
+
+
+.rowUPW:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*USER PROFILE COLUMN MENTSECTIONS*/
+.columnUPM {
+    float: left;
+    width: 50%;
+}
+
+
+.rowUPM:after {
+    content: "";
+    display:table;
+    clear: both;
+}
+
+.btnSocial {
+    background-color: black;
+    color: white;
+}
+
+
+
+

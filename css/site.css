@@ -1,0 +1,132 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    background-color:black;
+    color:white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .png files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".png"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/*WRAP COLUMN BODY */
+#wrapper {
+
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /*border:2px;
+    border-color: white;*/
+}
+/*WRAP COLUMN BODY END*/
+
+/*PARAGRAPH*/
+.heading {
+    font-family:Candara;
+    font-size:20px;
+    font-style:italic;
+    font-weight: normal;
+
+}
+
+#pM1 {
+
+    font-family:"Palatino Linotype";
+    font-size:15px;
+    font-style:normal;
+    font-weight: normal;
+}
+/*PARAGRAPH END*/
+
+
+/*SOCIAL MEDIA*/
+    .icon-bar {
+  position: fixed;
+  top: 27%;
+  right: 1%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+        background-color: #000;
+    }
+.facebook {
+    background: black;
+    color: white;
+}
+
+.twitter {
+    background: black;
+    color: white;
+}
+
+.google {
+    background: black;
+    color: white;
+}
+
+.linkedin {
+    background: black;
+    color: white;
+}
+
+.youtube {
+    background: black;
+    color: white;
+}
+/*SOCIAL MEDIA END*/
+
+/*NEWSLETTER*/
+.submitbutton {
+    background-color:black;
+    color:white;
+    height:auto;
+    width:auto;
+}
+
+
+
+
+
+
+

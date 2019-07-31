@@ -1,0 +1,12 @@
+﻿body {
+}
+.video {
+    max-width: 100%;
+    height: auto;
+    float:right;
+ 
+}
+.btnvideo {
+    background-color: red;
+    color: white;
+}
